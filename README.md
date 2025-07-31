@@ -17,12 +17,6 @@ This script detects facial landmarks and tracks the left eye's iris position to 
 
 ---
 
-## 📸 Demo
-
-> *(Add a GIF or screenshot here to showcase the live tracking – optional but recommended)*
-
----
-
 ## 🛠️ Technologies Used
 
 - [Python](https://www.python.org/)
