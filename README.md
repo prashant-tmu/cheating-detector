@@ -1,68 +1,83 @@
-Eye Gaze Tracker 👁️👀
-A real-time eye gaze detection project using Python, OpenCV, and MediaPipe. This script detects facial landmarks and tracks the left eye's iris position to determine whether the user is looking left, right, or center.
+# Eye Gaze Tracker 👁️👀
 
-🔍 Features
-Real-time face and eye landmark detection
+A real-time eye gaze detection project using **Python**, **OpenCV**, and **MediaPipe**.  
+This script detects facial landmarks and tracks the left eye's iris position to determine whether the user is looking **left**, **right**, or **center**.
 
-Iris tracking using MediaPipe's Face Mesh
+---
 
-Calculates gaze direction: Left, Right, or Center
+## 🔍 Features
 
-Simple and interactive UI with OpenCV
+- Real-time webcam-based eye tracking
+- Face and iris landmark detection using MediaPipe FaceMesh
+- Determines if the user is:
+  - 👈 Looking Left
+  - 👉 Looking Right
+  - 👁️ Looking Center
+- Displays gaze direction on screen
 
-📷 Demo
-Add a screen recording or image here (optional but highly recommended)
+---
 
-🛠️ Technologies Used
-Python
+## 📸 Demo
 
-OpenCV
+> *(Add a GIF or screenshot here to showcase the live tracking – optional but recommended)*
 
-MediaPipe
+---
 
-🚀 Installation
-Clone the repository:
+## 🛠️ Technologies Used
 
-bash
-Copy
-Edit
-git clone https://github.com/your-username/eye-gaze-tracker.git
+- [Python](https://www.python.org/)
+- [OpenCV](https://opencv.org/)
+- [MediaPipe](https://developers.google.com/mediapipe)
+
+---
+
+## 🚀 Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/eye-gaze-tracker.git
 cd eye-gaze-tracker
-Install dependencies:
-
+2. Install Dependencies
 bash
 Copy
 Edit
 pip install opencv-python mediapipe
-Run the script:
-
+3. Run the Script
 bash
 Copy
 Edit
 python gaze_tracker.py
+⚠️ Make sure your webcam is enabled and accessible.
 Press Esc to quit the app.
+
+🧠 How It Works
+Uses MediaPipe's FaceMesh model to detect 468 facial landmarks.
+
+Identifies:
+
+Left eye outer corner (Landmark 33)
+
+Left eye inner corner (Landmark 133)
+
+Left iris center (Landmark 468)
+
+Calculates the iris's position relative to the eye corners to determine gaze direction.
 
 📂 File Structure
 bash
 Copy
 Edit
 eye-gaze-tracker/
-├── gaze_tracker.py   # Main Python script
+├── gaze_tracker.py   # Main script file
 ├── README.md         # Project documentation
-🤓 How It Works
-MediaPipe Face Mesh provides 468 3D facial landmarks.
+✅ To-Do / Future Improvements
+ Add right eye tracking
 
-The script uses landmarks 33 and 133 for the outer and inner left eye corners.
+ Add blink detection
 
-Landmark 468 is used to locate the center of the left iris.
+ Track multiple faces
 
-The script calculates the horizontal iris position relative to the eye to determine gaze direction.
+ Head pose estimation
 
-🧠 Future Improvements
-Add right eye tracking
-
-Blink detection
-
-Head pose estimation
-
-Web version using JavaScript and TensorFlow.js
+ Convert to desktop or web application
